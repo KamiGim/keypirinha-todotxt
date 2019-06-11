@@ -99,7 +99,7 @@ class TodoTxt(kp.Plugin):
                             f.write(line)
                         if count > int(target):
                             text = re.search(self.REGEX_TODO_TXT, line)
-                            f.write(str(count - 1) + '.' + text.group(2))
+                            f.write(str(count - 1) + '.' + text.group(2) + "\n")
                         count += 1
 
     def on_activated(self):
